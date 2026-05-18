@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Семинар</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, #f0f7ff 0%, #fff0f8 100%);
+            color: #4a4a6a;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Декоративные цветочки */
+        .flower-top-left {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+            font-size: 45px;
+            color: #ff9dce;
+            opacity: 0.8;
+        }
+        .flower-bottom-right {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            font-size: 45px;
+            color: #87ceeb;
+            opacity: 0.8;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 90%;
+            text-align: center;
+            padding: 60px 20px;
+            z-index: 1;
+        }
+
+        .logo {
+            font-size: 34px;
+            font-weight: 700;
+            color: #6a5acd;
+            margin-bottom: 50px;
+            letter-spacing: 2px;
+        }
+
+        .greeting {
+            font-size: 36px;
+            font-weight: bold;
+            color: #8a2be2;
+            margin-bottom: 25px;
+            line-height: 1.2;
+        }
+
+        .instruction {
+            font-size: 22px;
+            font-weight: 500;
+            color: #4682b4;
+            margin-bottom: 60px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 20px 50px;
+            background: linear-gradient(to bottom, #87ceeb, #9370db);
+            color: white;
+            text-decoration: none;
+            border-radius: 60px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 25px rgba(135, 206, 235, 0.3);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.3),
+                transparent
+            );
+            transition: left 0.8s;
+            z-index: -1;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(135, 206, 235, 0.4);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            color: #9370db;
+            font-size: 14px;
+            border-top: 1px solid #e6e6fa;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(5px);
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Декоративные цветочки -->
+    <div class="flower-top-left">🌸</div>
+    <div class="flower-bottom-right">🌼</div>
+
+    <div class="container">
+        <div class="logo"></div>
+        <h1 class="greeting">рады видеть на семинаре :)</h1>
+        <p class="instruction">Чтобы продолжить, нажми кнопку</p>
+        <a href="task.html" class="btn">Перейти к заданию</a>
+    </div>
+
+    <footer>© 2026</footer>
+</body>
+</html>
